@@ -69,6 +69,7 @@
   align-items: center;
   height: 65px;
   margin-top: 5px;
+  position: relative;
 }
 
 .header__panel__item--title {
@@ -85,4 +86,54 @@
   margin: 0;
   margin-top: 12px;
   font-size: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    background-image: url(../../images/pattern-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header--title {
+    font-size: 2em;
+  }
+
+  .header__form {
+    width: 45%;
+  }
+
+  .header__panel {
+    margin-top: 2.5em;
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 2em 1.5em;
+  }
+
+  .header__panel__item {
+    height: 90px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 1em;
+  }
+
+  .header__panel__item::after {
+    content: "";
+    height: 80%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.53);
+    position: absolute;
+    right: -10px;
+  }
+
+  .header__panel__item:last-child::after {
+    content: none;
+  }
+
+  .header__panel__item--info {
+    font-size: 1.5em;
+    width: 80%;
+  }
 }
