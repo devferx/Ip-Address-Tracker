@@ -1,8 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import arrowIcon from "../assets/images/icon-arrow.svg";
 import "../assets/styles/components/Header.css";
 
-function Header({ title, ipAddres, location, timezone, isp }) {
+function Header() {
+  const title = useSelector((store) => store.title);
+  const ipAddres = useSelector((store) => store.ipAddres);
+  const location = useSelector((store) => store.location);
+  const timezone = useSelector((store) => store.timezone);
+  const isp = useSelector((store) => store.isp);
+
   return (
     <div className="header">
       <h2 className="header--title">{title}</h2>
