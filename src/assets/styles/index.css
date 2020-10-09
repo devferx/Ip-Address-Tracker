@@ -1,0 +1,10 @@
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}

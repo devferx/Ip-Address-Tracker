@@ -1,0 +1,88 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../../images/pattern-bg.png);
+  background-position: 57%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+.header--title {
+  color: white;
+  font-weight: 500;
+}
+
+.header__form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header__form--input {
+  width: 75%;
+  height: 60px;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.header__form--input::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+.header__form--btn {
+  background-color: black;
+  border: none;
+  width: 15%;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  outline: none;
+}
+
+.header__panel {
+  background-color: white;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 0.8em 0;
+  margin-top: 1em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  z-index: 5;
+}
+
+.header__panel__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 65px;
+  margin-top: 5px;
+}
+
+.header__panel__item--title {
+  color: var(--dark-gray);
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.header__panel__item--info {
+  font-weight: 500;
+  margin: 0;
+  margin-top: 12px;
+  font-size: 1.2em;
+}
