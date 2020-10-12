@@ -1,0 +1,14 @@
+.map-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.map-marker {
+  width: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  .map-container {
+    height: calc(100vh - 300px);
+  }
+}
