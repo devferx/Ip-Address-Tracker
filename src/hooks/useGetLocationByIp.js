@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import fetchGeoByIp from "../utils/fetchGeoByIp";
 
 export default function useGetLocationByIp(ip) {
   const [data, setData] = useState({
@@ -15,33 +16,14 @@ export default function useGetLocationByIp(ip) {
     },
   });
 
-  const URL = `https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_IP_GEO_TOKEN}&ipAddress=${ip}`;
   useEffect(() => {
     async function fetchData() {
-      const resp = await fetch(URL);
-      const {
-        location: { region, country, postalCode, timezone, lat, lng },
-        isp,
-      } = await resp.json();
-
-      const obj = {
-        panel: {
-          ipAddres: ip,
-          location: `${region}, ${country} ${postalCode}`,
-          timezone: timezone,
-          isp,
-        },
-        map: {
-          lng,
-          lat,
-          zoom: 16,
-        },
-      };
-
-      setData(obj);
+      const resp = await fetchGeoByIp(ip);
+      setData(resp);
     }
+
     fetchData();
-  }, [URL, ip]);
+  }, [ip]);
 
   return data;
 }
