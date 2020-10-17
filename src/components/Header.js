@@ -4,11 +4,10 @@ import arrowIcon from "../assets/images/icon-arrow.svg";
 import "../assets/styles/components/Header.css";
 
 function Header() {
-  const title = useSelector((store) => store.title);
-  const ipAddres = useSelector((store) => store.ipAddres);
-  const location = useSelector((store) => store.location);
-  const timezone = useSelector((store) => store.timezone);
-  const isp = useSelector((store) => store.isp);
+  const title = useSelector((state) => state.title);
+  const { ipAddres, location, timezone, isp } = useSelector(
+    (state) => state.panel
+  );
 
   return (
     <div className="header">
